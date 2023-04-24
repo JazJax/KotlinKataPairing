@@ -12,3 +12,4 @@ class Sample() {
         return a + b
     }
 }
+

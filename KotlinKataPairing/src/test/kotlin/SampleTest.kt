@@ -10,4 +10,5 @@ internal class SampleTest {
         val expected = 42
         assertEquals(expected, testSample.sum(40, 2))
     }
+
 }
