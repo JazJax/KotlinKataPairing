@@ -1,1 +1,1 @@
-# KotlinKataPairing
+# KotlinKataPairing. 
