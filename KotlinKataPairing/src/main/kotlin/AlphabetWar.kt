@@ -1,3 +1,6 @@
+//Kata link
+// https://meet.google.com/cxn-bzek-gev?authuser=0
+
 //left side
 val leftSide = mapOf(
     'w' to 4,
