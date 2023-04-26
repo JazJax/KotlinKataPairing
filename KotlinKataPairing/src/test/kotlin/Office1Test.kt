@@ -46,4 +46,11 @@ internal class Office1Test {
         assertEquals("Get Out Now!",result)
     }
 
+    @Test
+    fun `get list of people outed should return Choose a valid score! when score is greater than 10`() {
+        val meet = mapOf("Jasper" to 11, "Danny" to 2, "Pedro" to 5)
+        val result = outed(meet, "Pedro")
+        assertEquals("Choose a valid score!",result)
+    }
+
 }
