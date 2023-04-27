@@ -1,5 +1,6 @@
-import org.junit.jupiter.api.Assertions.*
-import org.junit.jupiter.api.Test
+
+import org.testng.Assert.assertEquals
+import org.testng.annotations.Test
 
 internal class SampleTest {
 
