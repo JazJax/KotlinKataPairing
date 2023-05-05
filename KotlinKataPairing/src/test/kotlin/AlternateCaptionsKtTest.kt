@@ -1,5 +1,4 @@
-import org.junit.jupiter.api.Assertions.*
-import org.testng.Assert
+import org.testng.AssertJUnit.assertEquals
 import org.testng.annotations.Test
 
 internal class AlternateCaptionsKtTest {
