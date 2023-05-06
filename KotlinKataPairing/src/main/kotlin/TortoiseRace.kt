@@ -1,22 +1,29 @@
-//Kata from https://www.codewars.com/kata/55e2adece53b4cdcb900006c
-
 package tortoise
-
-
-fun race(v1:Int, v2:Int, g:Int):IntArray {
-
-    var time = 0
-    var catchup = false
-    while (!catchup)  {
-        time++
-        var distTort1 :Int = v1 * time + g
-        var distTort2 :Int = v2 * time
-        var distance :Int = distTort2 - distTort1
-        if (distance >= 0) {
-            catchup = true
-        }
+fun race(v1: Int, v2: Int, g: Int): IntArray {
+    if (v2 <= v1) {
+        return intArrayOf() // if tortoise 2 is slower or same pace as v1, they never catch up
     }
 
+    // bulb was telling me else is redundant so I expect that it is not used in Kotlin that often
+    val timeInSeconds = (g * 3600) / (v2 - v1) //g is initial lead, v2 - v1 relative pace difference per hour (aka 3600 sec),
+    // tortoise B needs first to cover 70ft difference 70 * (850/3600) = cca 16 mins but
+    val hours = timeInSeconds / 3600
+    val minutes = (timeInSeconds % 3600) / 60
+    val seconds = timeInSeconds % 60
 
-    return intArrayOf(time, v1 * time + g, v2 * time)
+    return intArrayOf(hours, minutes, seconds)
 }
+
+// solution in Python:
+/*
+def race(v1, v2, g):
+if v2 <= v1:
+return []
+
+time_in_seconds = g * 3600 // (v2 - v1)
+hours = time_in_seconds // 3600
+minutes = (time_in_seconds % 3600) // 60
+seconds = time_in_seconds % 60
+
+return [hours, minutes, seconds]
+*/
