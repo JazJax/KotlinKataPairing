@@ -6,8 +6,8 @@ import org.testng.internal.junit.ArrayAsserts.assertArrayEquals
 class TortoiseTest {
     @Test
     fun `Test Speed of Tortoise A is slower than Tortoise B therefore they will catch` () {
-        val expected =  intArrayOf(720, 850, 70)
-        val result = race(0, 32, 18)
+        val expected =  intArrayOf(0, 32, 18)
+        val result = race(720, 850, 70)
         assertArrayEquals(expected, result)
     }
     @Test

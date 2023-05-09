@@ -1,3 +1,5 @@
+//Kata from https://www.codewars.com/kata/55e2adece53b4cdcb900006c
+
 package tortoise
 fun race(v1: Int, v2: Int, g: Int): IntArray {
     if (v2 <= v1) {
